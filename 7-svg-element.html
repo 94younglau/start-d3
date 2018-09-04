@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>svg element</title>
+
+	<style>
+		.svg-container {
+			background: orange;
+		}
+	</style>
+
+</head>
+<body>
+
+	<svg></svg>
+
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<script>
+		
+		//** svg
+
+		var svgWidth = 600
+		var svgheight = 500
+
+		var svg = d3.select('svg')
+			.attr('width', svgWidth)
+			.attr('height', svgheight)
+			.attr('class', 'svg-container')
+
+		var line = svg.append('line')
+			.attr('x1', 100)
+			.attr('x2', 499)
+			.attr('y1', 50)
+			.attr('y1', 80)
+			.attr('stroke', 'red')
+			.attr('stroke-width', 3)
+
+		var rect = svg.append('rect')	
+			.attr('x', 100)
+			.attr('y', 100)
+			.attr('width', 200)
+			.attr('height', 300)
+			.attr('fill', 'blue')
+
+		var circle = svg.append('circle')
+			.attr('cx', 400)
+			.attr('cy', 400)
+			.attr('r', 50)
+			.attr('fill', 'green')
+	</script>
+</body>
+</html>
